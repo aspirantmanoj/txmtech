@@ -67,13 +67,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\txmtech.mdf" />
+    <Content Include="App_Data\txmtech_log.ldf">
+      <DependentUpon>txmtech.mdf</DependentUpon>
+    </Content>
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\bootstrap.min.js" />
     <Content Include="css\jquery.min.js" />
     <Content Include="ch-password.aspx" />
     <Content Include="help.aspx" />
+    <Content Include="img\1.jpg" />
     <Content Include="index.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="view.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +118,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view.aspx.cs">
+      <DependentUpon>view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view.aspx.designer.cs">
+      <DependentUpon>view.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

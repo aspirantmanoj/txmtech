@@ -19,6 +19,7 @@
             height: 60px;
             background-color: #333399;
             width: 1612px;
+            text-align: center;
         }
         .auto-style4 {
             height: 103px;
@@ -72,7 +73,7 @@
                </td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>    
+                <td class="auto-style2" style="color: #FFFFFF"> Created by @ TXM - Technology </td>    
             </tr>
         </table>
               </div>

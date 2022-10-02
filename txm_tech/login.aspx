@@ -12,6 +12,7 @@
         .auto-style13 {
             width: 267px;
             height: 78px;
+            text-align: center;
         }
         .auto-style14 {
             height: 78px;
@@ -24,7 +25,7 @@
             width: 267px;
             height: 74px;
             font-size: x-large;
-            text-align: right;
+            text-align: center;
         }
         .auto-style17 {
             height: 74px;
@@ -36,16 +37,20 @@
         .auto-style19 {
             width: 267px;
             height: 75px;
-            text-align: right;
+            text-align: center;
             font-size: x-large;
         }
         .auto-style20 {
             font-weight: bold;
         }
+        .auto-style21 {
+            height: 78px;
+            text-align: justify;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    &nbsp;<table style="width:100%;">
+    &nbsp;<table class="nav-justified">
         <tr>
             <td class="auto-style15">L</td>
             <td class="auto-style16"><strong>S</strong><span class="auto-style20">TAFF NO</span></td>
@@ -62,11 +67,20 @@
         </tr>
         <tr>
             <td class="auto-style12"></td>
-            <td class="auto-style13"></td>
+            <td class="auto-style13">&nbsp;</td>
             <td class="auto-style14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Button1" runat="server" Height="42px" Text="Login" Width="201px" />
+                <div class="text-right">
+                <asp:Button ID="Button1" class="btn btn-primary btn-block" runat="server" Height="42px" Text="Login" Width="201px" OnClick="Button1_Click" />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style12">&nbsp;</td>
+            <td class="auto-style13">&nbsp;</td>
+            <td class="auto-style21">
+                <asp:Label ID="Label3" runat="server"></asp:Label>
             </td>
         </tr>
     </table>
-&nbsp;
 </asp:Content>
