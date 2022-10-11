@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.master.cs" Inherits="txm_tech.masterpage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+   <asp:ContentPlaceHolder ID="head" runat="server"> 
+    </asp:ContentPlaceHolder>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="css/jquery.min.js"></script>
+    <script src="css/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 594px;
+        }
+        .auto-style2 {
+            height: 60px;
+            background-color: #333399;
+            width: 1612px;
+            text-align: center;
+        }
+        .auto-style4 {
+            height: 103px;
+            text-align: center;
+            background-color: #333399;
+            width: 1612px;
+        }
+        .auto-style5 {
+            width: 1612px;
+            background-color: #333333;
+        }
+        .auto-style6 {
+            height: 515px;
+            background-color: #99CCFF;
+            width: 1612px;
+        }
+        .auto-style7 {
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+      <form id="form1" runat="server">
+          <div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style4">
+                    <asp:Label ID="Label1" runat="server" ClientIDMode="Static" Font-Bold="True" Font-Size="40pt" ForeColor="#CCCCCC" Text="TXM TECHNOLOGY TIME CHART"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style5">
+            <div class="container">
+  <ul class="nav nav-pills nav-justified">
+    <li class="active" style="font-size: medium"><a href="index.aspx">Home</a></li>
+    <li class="auto-style7"><a href="login.aspx">Login </a></li>
+    <li class="auto-style7"><a href="ch-password.aspx">Change Password</a></li>
+    <li class="auto-style7"><a href="help.aspx">Help</a></li>
+  </ul>
+</div>
+
+                </td>
+            </!tr>
+            <tr> 
+                  <td class="auto-style6">
+ 
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 
+            </asp:ContentPlaceHolder>
+
+                
+               </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" style="color: #FFFFFF"> Created by @ TXM - Technology </td>    
+            </tr>
+        </table>
+              </div>
+   </form>
+</body>
+</html>
