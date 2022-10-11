@@ -44,6 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -79,7 +81,10 @@
     <Content Include="img\1.jpg" />
     <Content Include="index.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="front.aspx" />
     <Content Include="view.aspx" />
+    <Content Include="view_drawing.aspx" />
+    <Content Include="view_operations.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +109,13 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="front.aspx.cs">
+      <DependentUpon>front.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="front.aspx.designer.cs">
+      <DependentUpon>front.aspx</DependentUpon>
+    </Compile>
     <Compile Include="masterpage.Master.cs">
       <DependentUpon>masterpage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,6 +138,20 @@
     <Compile Include="view.aspx.designer.cs">
       <DependentUpon>view.aspx</DependentUpon>
     </Compile>
+    <Compile Include="view_drawing.aspx.cs">
+      <DependentUpon>view_drawing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_drawing.aspx.designer.cs">
+      <DependentUpon>view_drawing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view_operations.aspx.cs">
+      <DependentUpon>view_operations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_operations.aspx.designer.cs">
+      <DependentUpon>view_operations.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="masterpage.Master" />
@@ -136,6 +162,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

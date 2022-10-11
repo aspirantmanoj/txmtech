@@ -13,7 +13,7 @@ namespace txm_tech
         {
             if (Session["id"] == null)
             {
-                Response.Redirect("Default.aspx");
+                Response.Redirect("index.aspx");
             }
             else
             {
@@ -28,6 +28,7 @@ namespace txm_tech
             Session.RemoveAll();
             Response.Redirect("index.aspx");
         }
+
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {

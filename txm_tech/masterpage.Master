@@ -10,6 +10,7 @@
       <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="css/jquery.min.js"></script>
     <script src="css/bootstrap.min.js"></script>
+
     <style type="text/css">
         .auto-style1 {
             width: 100%;
@@ -55,14 +56,14 @@
             <div class="container">
   <ul class="nav nav-pills nav-justified">
     <li class="active" style="font-size: medium"><a href="index.aspx">Home</a></li>
-    <li class="auto-style7"><a href="login.aspx">Login</a></li>
+    <li class="auto-style7"><a href="login.aspx">Login </a></li>
     <li class="auto-style7"><a href="ch-password.aspx">Change Password</a></li>
     <li class="auto-style7"><a href="help.aspx">Help</a></li>
   </ul>
 </div>
 
                 </td>
-            </tr>
+            </!tr>
             <tr> 
                   <td class="auto-style6">
  

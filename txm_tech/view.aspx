@@ -5,6 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+          <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="css/jquery.min.js"></script>
+    <script src="css/bootstrap.min.js"></script>
        <style type="text/css">
         #form1 {
             width: 995px;
@@ -40,6 +43,8 @@
     </style>
 </head>
 <body>
+
+
    <form id="form1" runat="server" class="auto-style8">
 
         <div style="margin-left: 1120px">
@@ -47,19 +52,19 @@
         </div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="935px" Height="132px" AllowSorting="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <Columns>
-                <asp:BoundField DataField="div" HeaderText="DIVISION" SortExpression="div" />
-                <asp:BoundField DataField="drawing" HeaderText="DRAWING" SortExpression="drawing" />
-                <asp:BoundField DataField="rev" HeaderText="REV NO" SortExpression="rev" />
-                <asp:BoundField DataField="descript" HeaderText="DESCRIPTION" SortExpression="descript" />
-                <asp:BoundField DataField="op_no" HeaderText="OPERATION NO" SortExpression="op_no" />
-                <asp:BoundField DataField="totalprocess" HeaderText="TOTAL OP" SortExpression="totalprocess" />
+                <asp:BoundField DataField="division" HeaderText="division" SortExpression="division" />
+                <asp:BoundField DataField="draw_no" HeaderText="Drawing" SortExpression="draw_no" />
+                <asp:BoundField DataField="rev" HeaderText="Revision" SortExpression="rev" />
+                <asp:BoundField DataField="desc" HeaderText="Description" SortExpression="desc" />
+                <asp:BoundField DataField="tot_pr" HeaderText="Total Process" SortExpression="tot_pr" />
+                <asp:BoundField DataField="var" HeaderText="Variant" SortExpression="var" />
                 <asp:CommandField ShowSelectButton="True" />
             </Columns>
             <EmptyDataTemplate>
                 <asp:Label ID="Label1" runat="server" style="font-size: medium; text-align: center" Text='<%# Eval("name") %>'></asp:Label>
             </EmptyDataTemplate>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [drawing], [rev], [div], [op_no], [totalprocess], [descript] FROM [drawing]">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [division], [draw_no], [rev], [desc], [tot_pr], [var] FROM [drawing]">
         </asp:SqlDataSource>
 
             <br />

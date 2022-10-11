@@ -7,42 +7,43 @@ using System.Reflection.Emit;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 
 namespace txm_tech
 {
-    public partial class login : System.Web.UI.Page
+    public partial class front : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["id"] != null)
-            {
-                Response.Redirect("front.aspx");
-            }
-
+            
         }
+        protected void Logout_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Response.Redirect("index.aspx");
+        }
+
         protected void Button1_Click(object sender, EventArgs e)
         {
-            bool isexist = CheckUser(TextBox1.Text, TextBox2.Text);
+            bool isexist = CheckDrawing(TextBox2.Text, TextBox3.Text);
 
             if (isexist)
             {
-                Session["id"] = TextBox1.Text;
-                Response.RedirectPermanent("front.aspx");
+                Session["dr"] = TextBox2.Text;
+                Response.RedirectPermanent("view_drawing.aspx?d="+TextBox2.Text+"&v="+TextBox3.Text);
             }
             else
             {
-                Label.Text = "Invalid Login Credentials";
-                Label.ForeColor = Color.Red;
+                Label4.Text = "Drawing Not Found";
+                Label4.ForeColor = Color.Red;
             }
         }
-        public bool CheckUser(string username, string password)
+        public bool CheckDrawing(string username, string password)
         {
             SqlConnection con = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\manoj\\source\\repos\\txm_tech\\txm_tech\\App_Data\\txmtech.mdf; Integrated Security = True");
             con.Open();
-            SqlCommand cmd = new SqlCommand("Select * from employee where email=@a and password=@b", con);
-            cmd.Parameters.AddWithValue("@a", TextBox1.Text);
-            cmd.Parameters.AddWithValue("@b", TextBox2.Text);
+            SqlCommand cmd = new SqlCommand("Select * from drawing where draw_no=@a and rev=@b", con);
+            cmd.Parameters.AddWithValue("@a", TextBox2.Text);
+            cmd.Parameters.AddWithValue("@b", TextBox3.Text);
             SqlDataReader dr = null;
 
             dr = cmd.ExecuteReader();
@@ -55,11 +56,5 @@ namespace txm_tech
                 return false;
             }
         }
-        protected void Logout_Click(object sender, EventArgs e)
-        {
-            Session.RemoveAll();
-            Response.Redirect("index.aspx");
-        }
-
     }
 }

@@ -9,21 +9,21 @@
         }
         .auto-style13 {
             width: 75px;
-            height: 118px;
+            height: 71px;
         }
         .auto-style14 {
             width: 495px;
-            height: 118px;
+            height: 71px;
         }
         .auto-style16 {
-            height: 118px;
+            height: 71px;
         }
         .auto-style17 {
             width: 805px;
         }
         .auto-style18 {
             width: 805px;
-            height: 118px;
+            height: 71px;
         }
         .auto-style19 {
             width: 75px;
@@ -38,8 +38,8 @@
             height: 163px;
         }
     .auto-style22 {
-        width: 392px;
-        height: 321px;
+        width: 405px;
+        height: 314px;
     }
     .auto-style23 {
         width: 75px;
