@@ -1,0 +1,112 @@
+<!Doctype html>
+<html>
+<style>
+.btn-group button {
+  background-color: #051094; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #281E5D;
+}
+</style>
+<body>
+
+<h1>Justified Button Group</h1>
+
+<p>Four buttons in a group:</p>
+<div class="btn-group" style="width:80%" align="middle">
+  <button style="width:25%">Apple</button>
+  <button style="width:25%">Samsung</button>
+  <button style="width:25%">Sony</button>
+  <button style="width:25%">HTC</button>
+</div>
+
+
+
+<style>
+.vbtn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+
+.vbtn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.vbtn-group button:hover {
+  background-color: #3e8e41;
+}
+</style>
+
+
+<h1>Vertical Button Group</h1>
+
+<div class="vbtn-group">
+  <button>Apple</button>
+  <button>Samsung</button>
+  <button>Sony</button>
+</div>
+
+
+<h2>Use data set to fetch by names<br/></h2>
+con = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\manoj\\source\\repos\\txm_tech\\txm_tech\\App_Data\\txmtech.mdf; Integrated Security = True"); <br/>
+SqlCommand cmd = new SqlCommand("Select * from [Table] ", con);<br/>
+ da = new SqlDataAdapter(cmd); <br/>
+ DataSet ds = new DataSet();   <br/>
+da.Fill(ds); <br/>
+if (ds.Tables[0].Rows.Count > 0)<br/>
+           {<br/>
+            TextBox1.Text = ds.Tables[0].Rows[0]["opn_no"].ToString();<br/>
+            TextBox2.Text = ds.Tables[0].Rows[0]["opn_total"].ToString();<br/>
+}<br/>
+
+<hr>
+<h2>Use data table to fetch by row nos<br/></h2>
+con = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\manoj\\source\\repos\\txm_tech\\txm_tech\\App_Data\\txmtech.mdf; Integrated Security = True"); <br/>
+SqlCommand cmd = new SqlCommand("Select * from [Table] ", con);<br/>
+SqlDataAdapter da = new SqlDataAdapter(cmd); <br/>
+  DataTable dt = new DataTable();<br/>
+da.Fill(dt); <br/>
+dr = dt.Rows[i];<br/>
+            TextBox1.Text = Convert.ToString(dr[3]);<br/>
+            TextBox9.Text = Convert.ToString(dr[13]);<br/>
+
+
+<hr>
+<h2>Making of Cookie<br/></h2>
+
+HttpCookie cookie = new HttpCookie("mybigcookie");<br/>
+                    cookie.Values.Add( "drawing", Request.QueryString["d"].ToString());<br/>
+                    cookie.Values.Add("version", Request.QueryString["v"].ToString());<br/>
+                    Response.Cookies.Add(cookie);<br/><br/>
+
+<h3> On next Page </h3><br/>
+
+Label4.Text = Request.Cookies["mybigcookie"]["drawing"];<br/>
+Label5.Text = Request.Cookies["mybigcookie"]["version"];<br/>
+
+</body>
+</html>
